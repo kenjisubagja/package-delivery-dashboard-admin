@@ -25,13 +25,6 @@ Use the prefilled demo account:
 
 Login is stored in `sessionStorage`. If the user is not logged in, dashboard pages redirect to `login/`.
 
-## Run
-
-Open the project with a static web server, then visit:
-
-```text
-/dashboard-pengiriman-admin/login/
-```
 
 Example:
 
