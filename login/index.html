@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <base href="../" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Hopeless Express Admin Panel</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="login-page">
+    <main class="login-shell">
+      <section class="login-hero">
+        <div class="login-brand">
+          <div class="brand-shield">H</div>
+          <div>
+            <strong>Hopeless Express</strong>
+            <span>Admin Panel</span>
+          </div>
+        </div>
+
+        <div class="login-copy">
+          <div class="soft-cloud cloud-a"></div>
+          <h1>Kelola pengiriman dengan mudah dan terorganisir.</h1>
+          <p>Login untuk mengakses dashboard admin dan kelola data pengiriman dengan efisien.</p>
+        </div>
+
+        <div class="delivery-illustration" aria-hidden="true">
+          <div class="city"></div>
+          <div class="mini-truck">
+            <span class="cargo"></span>
+            <span class="cab"></span>
+            <span class="wheel left"></span>
+            <span class="wheel right"></span>
+          </div>
+          <div class="route-dash"></div>
+          <div class="map-pin"></div>
+          <div class="login-box"></div>
+        </div>
+      </section>
+
+      <section class="login-card" aria-labelledby="loginTitle">
+        <h2 id="loginTitle">Selamat Datang Kembali!</h2>
+        <p>Silakan login untuk melanjutkan ke dashboard.</p>
+
+        <form id="loginForm">
+          <label>
+            <span>Email</span>
+            <div class="login-field">
+              <b aria-hidden="true">✉</b>
+              <input id="loginEmail" type="email" placeholder="Masukkan email Anda" value="admin@hopeless.local" required />
+            </div>
+          </label>
+
+          <label>
+            <span>Password</span>
+            <div class="login-field">
+              <b aria-hidden="true">▣</b>
+              <input id="loginPassword" type="password" placeholder="Masukkan password Anda" value="admin123" required />
+              <button id="togglePassword" type="button" aria-label="Tampilkan password">👁</button>
+            </div>
+          </label>
+
+          <button class="login-button" type="submit">Login</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="login-footer">© 2025 Hopeless Express Admin Panel. All rights reserved.</footer>
+    <script src="app.js"></script>
+  </body>
+</html>
