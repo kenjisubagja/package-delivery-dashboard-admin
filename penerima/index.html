@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    
+    <base href="../" /><meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Penerima - Hopeless Express Admin Panel</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-shield">S</div>
+        <div>
+          <strong>Hopeless Express</strong>
+          <span>Admin Panel</span>
+        </div>
+      </div>
+
+      <nav class="nav-menu" aria-label="Menu admin">
+        <a href="./" class="nav-item">
+          <span class="nav-icon">⌂</span>
+          Dashboard
+        </a>
+        <div class="nav-group open">
+          <button type="button" class="nav-item nav-toggle">
+            <span class="nav-icon">▣</span>
+            Pengiriman
+          </button>
+          <div class="sub-menu">
+            <a href="pengiriman/">Daftar Pengiriman</a>
+            <a href="tambah/">Tambah Pengiriman</a>
+          </div>
+        </div>
+        <a href="penerima/" class="nav-item active-page">
+          <span class="nav-icon">♙</span>
+          Penerima
+        </a>
+        <a href="resi/" class="nav-item">
+          <span class="nav-icon">▤</span>
+          Resi
+        </a>
+        <a href="lokasi/" class="nav-item">
+          <span class="nav-icon">⌖</span>
+          Lokasi
+        </a>
+        <a href="user/" class="nav-item">
+          <span class="nav-icon">♙</span>
+          User
+        </a>
+        <a href="laporan/" class="nav-item">
+          <span class="nav-icon">▥</span>
+          Laporan
+        </a>
+        <a href="pengaturan/" class="nav-item">
+          <span class="nav-icon">⚙</span>
+          Pengaturan
+        </a>
+      </nav>
+    </aside>
+
+    <main class="admin-shell">
+      <header class="topbar">
+        <div class="breadcrumb">
+          <strong>Penerima</strong>
+        </div>
+
+        <div class="admin-actions">
+          <button type="button" class="notification" aria-label="Notifikasi">
+            <span>3</span>
+          </button>
+          <div class="profile">
+            <div class="avatar">A</div>
+            <div>
+              <strong>Admin</strong>
+              <span>Super Admin</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="content">
+        <div class="page-title split-title">
+          <div>
+            <h1>Penerima</h1>
+            <p>Kelola data penerima untuk kebutuhan pengiriman paket.</p>
+          </div>
+          <button type="button" class="btn primary">Tambah Penerima</button>
+        </div>
+
+        <section class="table-card">
+          <div class="table-toolbar single">
+            <label class="search-field">
+              <span>Cari Penerima</span>
+              <input type="search" placeholder="Cari nama, telepon, atau kota" />
+            </label>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Nama</th>
+                  <th>Telepon</th>
+                  <th>Kota</th>
+                  <th>Total Paket</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Andi Pratama</strong></td>
+                  <td>0812-2222-4501</td>
+                  <td>Bandung, Jawa Barat</td>
+                  <td>8</td>
+                  <td><button type="button" class="table-action">Detail</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Raka Pratama</strong></td>
+                  <td>0813-9022-1100</td>
+                  <td>Surabaya, Jawa Timur</td>
+                  <td>4</td>
+                  <td><button type="button" class="table-action">Detail</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Alya Putri</strong></td>
+                  <td>0821-7788-9102</td>
+                  <td>Yogyakarta, DI Yogyakarta</td>
+                  <td>12</td>
+                  <td><button type="button" class="table-action">Detail</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
