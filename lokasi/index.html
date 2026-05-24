@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    
+    <base href="../" /><meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lokasi - Hopeless Express Admin Panel</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-shield">S</div>
+        <div>
+          <strong>Hopeless Express</strong>
+          <span>Admin Panel</span>
+        </div>
+      </div>
+
+      <nav class="nav-menu" aria-label="Menu admin">
+        <a href="./" class="nav-item">
+          <span class="nav-icon">⌂</span>
+          Dashboard
+        </a>
+        <div class="nav-group open">
+          <button type="button" class="nav-item nav-toggle">
+            <span class="nav-icon">▣</span>
+            Pengiriman
+          </button>
+          <div class="sub-menu">
+            <a href="pengiriman/">Daftar Pengiriman</a>
+            <a href="tambah/">Tambah Pengiriman</a>
+          </div>
+        </div>
+        <a href="penerima/" class="nav-item">
+          <span class="nav-icon">♙</span>
+          Penerima
+        </a>
+        <a href="resi/" class="nav-item">
+          <span class="nav-icon">▤</span>
+          Resi
+        </a>
+        <a href="lokasi/" class="nav-item active-page">
+          <span class="nav-icon">⌖</span>
+          Lokasi
+        </a>
+        <a href="user/" class="nav-item">
+          <span class="nav-icon">♙</span>
+          User
+        </a>
+        <a href="laporan/" class="nav-item">
+          <span class="nav-icon">▥</span>
+          Laporan
+        </a>
+        <a href="pengaturan/" class="nav-item">
+          <span class="nav-icon">⚙</span>
+          Pengaturan
+        </a>
+      </nav>
+    </aside>
+
+    <main class="admin-shell">
+      <header class="topbar">
+        <div class="breadcrumb">
+          <strong>Lokasi</strong>
+        </div>
+
+        <div class="admin-actions">
+          <button type="button" class="notification" aria-label="Notifikasi">
+            <span>3</span>
+          </button>
+          <div class="profile">
+            <div class="avatar">A</div>
+            <div>
+              <strong>Admin</strong>
+              <span>Super Admin</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="content">
+        <div class="page-title split-title">
+          <div>
+            <h1>Lokasi</h1>
+            <p>Kelola kota asal, kota tujuan, dan titik sortir pengiriman.</p>
+          </div>
+          <button type="button" class="btn primary">Tambah Lokasi</button>
+        </div>
+
+        <section class="location-grid">
+          <article class="location-card">
+            <div class="location-pin">⌖</div>
+            <div>
+              <h2>Jakarta, DKI Jakarta</h2>
+              <p>Hub utama pengiriman nasional.</p>
+              <span class="status-pill delivered">Aktif</span>
+            </div>
+          </article>
+          <article class="location-card">
+            <div class="location-pin">⌖</div>
+            <div>
+              <h2>Bandung, Jawa Barat</h2>
+              <p>Cabang penerimaan area Jawa Barat.</p>
+              <span class="status-pill delivered">Aktif</span>
+            </div>
+          </article>
+          <article class="location-card">
+            <div class="location-pin">⌖</div>
+            <div>
+              <h2>Surabaya, Jawa Timur</h2>
+              <p>Lokasi sortir regional Jawa Timur.</p>
+              <span class="status-pill sorting">Sortir Padat</span>
+            </div>
+          </article>
+        </section>
+
+        <section class="table-card location-table">
+          <div class="table-toolbar single">
+            <label class="search-field">
+              <span>Cari Lokasi</span>
+              <input type="search" placeholder="Cari kota atau tipe lokasi" />
+            </label>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Lokasi</th>
+                  <th>Tipe</th>
+                  <th>Paket Aktif</th>
+                  <th>Status</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Jakarta, DKI Jakarta</strong></td>
+                  <td>Hub Utama</td>
+                  <td>42</td>
+                  <td><span class="status-pill delivered">Aktif</span></td>
+                  <td><button type="button" class="table-action">Detail</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Bandung, Jawa Barat</strong></td>
+                  <td>Cabang Tujuan</td>
+                  <td>18</td>
+                  <td><span class="status-pill delivered">Aktif</span></td>
+                  <td><button type="button" class="table-action">Detail</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Surabaya, Jawa Timur</strong></td>
+                  <td>Lokasi Sortir</td>
+                  <td>31</td>
+                  <td><span class="status-pill sorting">Sortir Padat</span></td>
+                  <td><button type="button" class="table-action">Detail</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

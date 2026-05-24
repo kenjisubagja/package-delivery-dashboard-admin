@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    
+    <base href="../" /><meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tambah Pengiriman - Hopeless Express Admin Panel</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-shield">S</div>
+        <div>
+          <strong>Hopeless Express</strong>
+          <span>Admin Panel</span>
+        </div>
+      </div>
+
+      <nav class="nav-menu" aria-label="Menu admin">
+        <a href="./" class="nav-item">
+          <span class="nav-icon">⌂</span>
+          Dashboard
+        </a>
+        <div class="nav-group open">
+          <button type="button" class="nav-item nav-toggle">
+            <span class="nav-icon">▣</span>
+            Pengiriman
+          </button>
+          <div class="sub-menu">
+            <a href="pengiriman/">Daftar Pengiriman</a>
+            <a href="tambah/" class="active">Tambah Pengiriman</a>
+          </div>
+        </div>
+        <a href="penerima/" class="nav-item">
+          <span class="nav-icon">♙</span>
+          Penerima
+        </a>
+        <a href="resi/" class="nav-item">
+          <span class="nav-icon">▤</span>
+          Resi
+        </a>
+        <a href="lokasi/" class="nav-item">
+          <span class="nav-icon">⌖</span>
+          Lokasi
+        </a>
+        <a href="user/" class="nav-item">
+          <span class="nav-icon">♙</span>
+          User
+        </a>
+        <a href="laporan/" class="nav-item">
+          <span class="nav-icon">▥</span>
+          Laporan
+        </a>
+        <a href="pengaturan/" class="nav-item">
+          <span class="nav-icon">⚙</span>
+          Pengaturan
+        </a>
+      </nav>
+    </aside>
+
+    <main class="admin-shell">
+      <header class="topbar">
+        <div class="breadcrumb">
+          <span>Pengiriman</span>
+          <strong>Tambah Pengiriman</strong>
+        </div>
+
+        <div class="admin-actions">
+          <button type="button" class="notification" aria-label="Notifikasi">
+            <span>3</span>
+          </button>
+          <div class="profile">
+            <div class="avatar">A</div>
+            <div>
+              <strong>Admin</strong>
+              <span>Super Admin</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="content">
+        <div class="page-title">
+          <h1>Tambah Paket</h1>
+          <p>Isi data paket yang akan dikirimkan.</p>
+        </div>
+
+        <form class="shipment-form">
+          <section class="form-section">
+            <div class="section-icon">▣</div>
+            <div class="section-content">
+              <h2>Informasi Resi</h2>
+              <label>
+                <span>Nomor Resi</span>
+                <div class="inline-field">
+                  <input type="text" value="BM-2025-0001" readonly />
+                  <span class="field-badge">Terisi otomatis</span>
+                </div>
+              </label>
+              <p class="field-note">Nomor resi dihasilkan otomatis berdasarkan data pengiriman yang sudah ada.</p>
+            </div>
+          </section>
+
+          <section class="form-section">
+            <div class="section-icon">♙</div>
+            <div class="section-content">
+              <h2>Informasi Penerima</h2>
+              <label>
+                <span>Nama Lengkap Penerima <b>*</b></span>
+                <input type="text" value="Andi Pratama" />
+              </label>
+            </div>
+          </section>
+
+          <section class="form-section">
+            <div class="section-icon">⌖</div>
+            <div class="section-content">
+              <h2>Informasi Pengiriman</h2>
+              <div class="form-grid">
+                <label>
+                  <span>Dari (Kota Asal) <b>*</b></span>
+                  <select>
+                    <option>Jakarta, DKI Jakarta</option>
+                    <option>Bandung, Jawa Barat</option>
+                    <option>Surabaya, Jawa Timur</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Tujuan (Kota Tujuan) <b>*</b></span>
+                  <select>
+                    <option>Bandung, Jawa Barat</option>
+                    <option>Yogyakarta, DI Yogyakarta</option>
+                    <option>Denpasar, Bali</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Status Pengiriman <b>*</b></span>
+                  <select id="statusSelect">
+                    <option value="sorting">Paket di Lokasi Sortir</option>
+                    <option value="transit" selected>Dalam Perjalanan</option>
+                    <option value="delivered">Paket Sudah Tiba</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Estimasi Tiba <b>*</b></span>
+                  <input type="date" value="2025-05-23" />
+                </label>
+              </div>
+
+              <div class="status-progress" aria-label="Progress status pengiriman">
+                <span class="track"></span>
+                <span class="status-point start"></span>
+                <span class="status-point current" id="statusPoint">▣</span>
+                <span class="status-point end"></span>
+              </div>
+              <strong class="status-label" id="statusLabel">Dalam Perjalanan</strong>
+              <p class="field-note">Status ini akan ditampilkan ke penerima untuk melacak paket.</p>
+            </div>
+          </section>
+        </form>
+
+        <div class="form-actions">
+          <button type="button" class="btn secondary">Batal</button>
+          <button type="button" class="btn primary">Simpan Paket</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

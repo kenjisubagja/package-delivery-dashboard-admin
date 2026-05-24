@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    
+    <base href="../" /><meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pengaturan - Hopeless Express Admin Panel</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-shield">S</div>
+        <div>
+          <strong>Hopeless Express</strong>
+          <span>Admin Panel</span>
+        </div>
+      </div>
+
+      <nav class="nav-menu" aria-label="Menu admin">
+        <a href="./" class="nav-item"><span class="nav-icon">⌂</span>Dashboard</a>
+        <div class="nav-group open">
+          <button type="button" class="nav-item nav-toggle">
+            <span class="nav-icon">▣</span>Pengiriman
+          </button>
+          <div class="sub-menu">
+            <a href="pengiriman/">Daftar Pengiriman</a>
+            <a href="tambah/">Tambah Pengiriman</a>
+          </div>
+        </div>
+        <a href="penerima/" class="nav-item"><span class="nav-icon">♙</span>Penerima</a>
+        <a href="resi/" class="nav-item"><span class="nav-icon">▤</span>Resi</a>
+        <a href="lokasi/" class="nav-item"><span class="nav-icon">⌖</span>Lokasi</a>
+        <a href="user/" class="nav-item"><span class="nav-icon">♙</span>User</a>
+        <a href="laporan/" class="nav-item"><span class="nav-icon">▥</span>Laporan</a>
+        <a href="pengaturan/" class="nav-item active-page"><span class="nav-icon">⚙</span>Pengaturan</a>
+      </nav>
+    </aside>
+
+    <main class="admin-shell">
+      <header class="topbar">
+        <div class="breadcrumb"><strong>Pengaturan</strong></div>
+        <div class="admin-actions">
+          <button type="button" class="notification" aria-label="Notifikasi"><span>3</span></button>
+          <div class="profile">
+            <div class="avatar">A</div>
+            <div><strong>Admin</strong><span>Super Admin</span></div>
+          </div>
+        </div>
+      </header>
+
+      <section class="content">
+        <div class="page-title">
+          <h1>Pengaturan</h1>
+          <p>Atur profil bisnis, notifikasi, dan preferensi dashboard.</p>
+        </div>
+
+        <section class="settings-grid">
+          <form class="settings-card">
+            <h2>Profil Perusahaan</h2>
+            <label>
+              <span>Nama Perusahaan</span>
+              <input type="text" value="Hopeless Express" />
+            </label>
+            <label>
+              <span>Email Operasional</span>
+              <input type="email" value="ops@hopeless.local" />
+            </label>
+            <label>
+              <span>Nomor Telepon</span>
+              <input type="tel" value="021-7788-9900" />
+            </label>
+          </form>
+
+          <form class="settings-card">
+            <h2>Preferensi Dashboard</h2>
+            <label>
+              <span>Zona Waktu</span>
+              <select>
+                <option>Asia/Jakarta</option>
+                <option>Asia/Makassar</option>
+                <option>Asia/Jayapura</option>
+              </select>
+            </label>
+            <label>
+              <span>Format Tanggal</span>
+              <select>
+                <option>DD/MM/YYYY</option>
+                <option>YYYY-MM-DD</option>
+              </select>
+            </label>
+            <label class="toggle-row">
+              <span>Notifikasi Pengiriman</span>
+              <input type="checkbox" checked />
+            </label>
+          </form>
+        </section>
+
+        <div class="form-actions settings-actions">
+          <button type="button" class="btn secondary">Reset</button>
+          <button type="button" class="btn primary">Simpan Pengaturan</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

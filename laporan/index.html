@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    
+    <base href="../" /><meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laporan - Hopeless Express Admin Panel</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-shield">S</div>
+        <div>
+          <strong>Hopeless Express</strong>
+          <span>Admin Panel</span>
+        </div>
+      </div>
+
+      <nav class="nav-menu" aria-label="Menu admin">
+        <a href="./" class="nav-item"><span class="nav-icon">⌂</span>Dashboard</a>
+        <div class="nav-group open">
+          <button type="button" class="nav-item nav-toggle">
+            <span class="nav-icon">▣</span>Pengiriman
+          </button>
+          <div class="sub-menu">
+            <a href="pengiriman/">Daftar Pengiriman</a>
+            <a href="tambah/">Tambah Pengiriman</a>
+          </div>
+        </div>
+        <a href="penerima/" class="nav-item"><span class="nav-icon">♙</span>Penerima</a>
+        <a href="resi/" class="nav-item"><span class="nav-icon">▤</span>Resi</a>
+        <a href="lokasi/" class="nav-item"><span class="nav-icon">⌖</span>Lokasi</a>
+        <a href="user/" class="nav-item"><span class="nav-icon">♙</span>User</a>
+        <a href="laporan/" class="nav-item active-page"><span class="nav-icon">▥</span>Laporan</a>
+        <a href="pengaturan/" class="nav-item"><span class="nav-icon">⚙</span>Pengaturan</a>
+      </nav>
+    </aside>
+
+    <main class="admin-shell">
+      <header class="topbar">
+        <div class="breadcrumb"><strong>Laporan</strong></div>
+        <div class="admin-actions">
+          <button type="button" class="notification" aria-label="Notifikasi"><span>3</span></button>
+          <div class="profile">
+            <div class="avatar">A</div>
+            <div><strong>Admin</strong><span>Super Admin</span></div>
+          </div>
+        </div>
+      </header>
+
+      <section class="content">
+        <div class="page-title split-title">
+          <div>
+            <h1>Laporan</h1>
+            <p>Ringkasan performa pengiriman dan status paket demo.</p>
+          </div>
+          <button type="button" class="btn primary">Export Laporan</button>
+        </div>
+
+        <section class="dashboard-grid report-grid">
+          <article class="summary-card">
+            <span>Paket Bulan Ini</span>
+            <strong>428</strong>
+            <p>Naik 18% dari bulan lalu</p>
+          </article>
+          <article class="summary-card">
+            <span>Rata-rata Tiba</span>
+            <strong>2.4h</strong>
+            <p>Estimasi operasional demo</p>
+          </article>
+          <article class="summary-card">
+            <span>Selesai</span>
+            <strong>312</strong>
+            <p>Paket sudah diterima</p>
+          </article>
+          <article class="summary-card">
+            <span>Tertunda</span>
+            <strong>17</strong>
+            <p>Menunggu proses sortir</p>
+          </article>
+        </section>
+
+        <section class="table-card">
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Periode</th>
+                  <th>Total Paket</th>
+                  <th>Dalam Perjalanan</th>
+                  <th>Sudah Tiba</th>
+                  <th>Lokasi Sortir</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Mei 2025</strong></td>
+                  <td>428</td>
+                  <td>99</td>
+                  <td>312</td>
+                  <td>17</td>
+                </tr>
+                <tr>
+                  <td><strong>April 2025</strong></td>
+                  <td>361</td>
+                  <td>84</td>
+                  <td>260</td>
+                  <td>17</td>
+                </tr>
+                <tr>
+                  <td><strong>Maret 2025</strong></td>
+                  <td>344</td>
+                  <td>78</td>
+                  <td>251</td>
+                  <td>15</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
