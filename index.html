@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Hopeless Express Admin Panel</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-shield">H</div>
+        <div>
+          <strong>Hopeless Express</strong>
+          <span>Admin Panel</span>
+        </div>
+      </div>
+
+      <nav class="nav-menu" aria-label="Menu admin">
+        <a href="./" class="nav-item active-page">
+          <span class="nav-icon">⌂</span>
+          Dashboard
+        </a>
+        <div class="nav-group open">
+          <button type="button" class="nav-item nav-toggle">
+            <span class="nav-icon">▣</span>
+            Pengiriman
+          </button>
+          <div class="sub-menu">
+            <a href="pengiriman/">Daftar Pengiriman</a>
+            <a href="tambah/">Tambah Pengiriman</a>
+          </div>
+        </div>
+        <a href="penerima/" class="nav-item">
+          <span class="nav-icon">♙</span>
+          Penerima
+        </a>
+        <a href="resi/" class="nav-item">
+          <span class="nav-icon">▤</span>
+          Resi
+        </a>
+        <a href="lokasi/" class="nav-item">
+          <span class="nav-icon">⌖</span>
+          Lokasi
+        </a>
+        <a href="user/" class="nav-item">
+          <span class="nav-icon">♙</span>
+          User
+        </a>
+        <a href="laporan/" class="nav-item">
+          <span class="nav-icon">▥</span>
+          Laporan
+        </a>
+        <a href="pengaturan/" class="nav-item">
+          <span class="nav-icon">⚙</span>
+          Pengaturan
+        </a>
+      </nav>
+    </aside>
+
+    <main class="admin-shell">
+      <header class="topbar">
+        <div class="breadcrumb">
+          <strong>Dashboard</strong>
+        </div>
+
+        <div class="admin-actions">
+          <button type="button" class="notification" aria-label="Notifikasi">
+            <span>3</span>
+          </button>
+          <div class="profile">
+            <div class="avatar">A</div>
+            <div>
+              <strong>Admin</strong>
+              <span>Super Admin</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="content">
+        <div class="page-title">
+          <h1>Dashboard</h1>
+          <p>Ringkasan pengiriman dan aktivitas paket hari ini.</p>
+        </div>
+
+        <section class="dashboard-grid" aria-label="Ringkasan dashboard">
+          <article class="summary-card">
+            <span>Total Paket</span>
+            <strong>128</strong>
+            <p>24 paket baru hari ini</p>
+          </article>
+          <article class="summary-card">
+            <span>Dalam Perjalanan</span>
+            <strong>64</strong>
+            <p>Aktif dikirim kurir</p>
+          </article>
+          <article class="summary-card">
+            <span>Lokasi Sortir</span>
+            <strong>31</strong>
+            <p>Menunggu proses berikutnya</p>
+          </article>
+          <article class="summary-card">
+            <span>Sudah Tiba</span>
+            <strong>33</strong>
+            <p>Selesai diterima penerima</p>
+          </article>
+        </section>
+
+        <section class="dashboard-panel">
+          <div>
+            <h2>Pengiriman Terbaru</h2>
+            <p>Data ini masih demo statis untuk tampilan awal dashboard.</p>
+          </div>
+          <a href="tambah/" class="btn primary">Tambah Paket</a>
+        </section>
+
+        <section class="chart-layout" aria-label="Grafik dashboard">
+          <article class="chart-card">
+            <div class="chart-head">
+              <div>
+                <h2>Grafik Pengiriman Mingguan</h2>
+                <p>Total paket masuk per hari.</p>
+              </div>
+              <span>Minggu ini</span>
+            </div>
+            <div class="bar-chart">
+              <div style="--value: 54%"><span>Sen</span></div>
+              <div style="--value: 72%"><span>Sel</span></div>
+              <div style="--value: 48%"><span>Rab</span></div>
+              <div style="--value: 86%"><span>Kam</span></div>
+              <div style="--value: 64%"><span>Jum</span></div>
+              <div style="--value: 92%"><span>Sab</span></div>
+              <div style="--value: 40%"><span>Min</span></div>
+            </div>
+          </article>
+
+          <article class="chart-card compact-chart">
+            <div class="chart-head">
+              <div>
+                <h2>Status Paket</h2>
+                <p>Distribusi status aktif.</p>
+              </div>
+            </div>
+            <div class="donut-chart" aria-hidden="true"></div>
+            <div class="chart-legend">
+              <span><b class="legend-blue"></b>Dalam Perjalanan</span>
+              <span><b class="legend-yellow"></b>Lokasi Sortir</span>
+              <span><b class="legend-green"></b>Sudah Tiba</span>
+            </div>
+          </article>
+        </section>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
